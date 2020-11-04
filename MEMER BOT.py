@@ -1,13 +1,12 @@
 import random
 
-import aiohttp
+
 import discord
-import time
+
 
 import praw as praw
 
-intents = discord.Intents.all()
-client = discord.Client(intents=intents)
+client = discord.Client()
 
 
 reddit = praw.Reddit(client_id='JQGiY5EzRhDwwg',
@@ -20,7 +19,7 @@ async def on_message(message):
     Channel_general = client.get_channel(773150585099911178)
     if message.content == ".meme":
         memes_submissions = reddit.subreddit('memes').hot()
-        post_to_pick = random.randint(1, 100)
+        post_to_pick = random.randint(1, 10)
         for i in range(0, post_to_pick):
             submission = next(x for x in memes_submissions if not x.stickied)
 
