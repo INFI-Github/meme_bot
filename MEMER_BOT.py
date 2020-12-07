@@ -23,7 +23,7 @@ async def on_message(message):
         for i in range(0, post_to_pick):
             submission = next(x for x in memes_submissions if not x.stickied)
 
-        await Channel_general.send(submission.url)
+        await message.channel.send(submission.url)
 
 
 client.run("NzczMTQ5MDYxMjIxODQyOTU1.X6FBLA.cwaHyrXeeQNoIT8WrxtKNqTKijU")
