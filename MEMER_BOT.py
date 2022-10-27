@@ -9,9 +9,9 @@ import praw as praw
 client = discord.Client()
 
 
-reddit = praw.Reddit(client_id='JQGiY5EzRhDwwg',
-                     client_secret='f4nFjO6XLJtHjt7MJ3eIRwxg9x463Q',
-                     user_agent='INFI_MEMES')
+reddit = praw.Reddit(client_id='your client id here',
+                     client_secret='your client secret here',
+                     user_agent='INFI')
 
 
 @client.event
